@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/animals/new">Add an animal</a> <!-- Link for adding a new animal -->
+    </nav>
+    <h1>Animals</h1> <!-- Heading for the animals list -->
+    <ul>
+        <% animals.forEach(animal=> { %> <!-- Loop through each animal in the "animals" array -->
+            <li>
+                <a href="/animals/<%= animal._id %>">
+                    <%= animal.species %>
+                </a> <!-- Link to view the details of a specific animal -->
+            </li>
+            <% }) %> <!-- End of the loop -->
+    </ul>
+
+</body>
+
+</html>

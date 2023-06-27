@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Create New Book</h1> <!-- Heading for creating a new animal -->
+    <form action="/animals" method="POST">
+        <!-- Form for submitting the new animal data to the /animals route with POST method -->
+        Species: <input type="text" name="species" required />
+        <!-- Input field for specifying the species of the animal -->
+        <br />
+        Extinct: <input type="checkbox" name="extinct" /> <!-- Checkbox for indicating if the animal is extinct -->
+        <br />
+        Location: <input type="text" name="location" /> <!-- Input field for specifying the location of the animal -->
+        <br />
+        Life Expectancy: <input type="number" name="lifeExpectancy" />
+        <!-- Input field for specifying the life expectancy of the animal -->
+        <br />
+        <input type="submit" name="" value="Add Animal" /> <!-- Submit button for adding the new animal -->
+    </form>
+</body>
+
+</html>

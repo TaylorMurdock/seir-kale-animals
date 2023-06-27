@@ -1,12 +1,12 @@
-const mongoose = require("./connection");
+const mongoose = require("./connection"); // Import the Mongoose connection object from the "./connection" file
 
-const animalSchema = new mongoose.SchemaType({
+const animalSchema = new mongoose.Schema({
   species: { type: String, required: true },
-  extinct: { type: Boolean, required: true },
-  location: { type: String, required: false },
-  lifeExpectancy: { type: Number, required: false },
+  extinct: { type: Boolean },
+  location: { type: String },
+  lifeExpectancy: { type: Number },
 });
 
-const Animal = mongoose.model("Animal", animalSchema);
+const Animal = mongoose.model("Animal", animalSchema); // Create a Mongoose model named "Animal" using the animalSchema
 
-module.exports = Animals;
+module.exports = Animal; // Export the Animal model for use in other files

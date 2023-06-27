@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/animals">Back to the animal list page</a> <!-- Link to go back to the animal list page -->
+    </nav>
+
+    <form method="POST" action="/animals/<%= animal._id %>?_method=PUT"> <!-- Form for updating the animal -->
+        <input type="text" name="species" value="<%= animal.species %>" />
+        <!-- Input field for the species with initial value from the animal object -->
+        <br />
+        <input type="text" name="location" value="<%= animal.location %>" />
+        <!-- Input field for the location with initial value from the animal object -->
+        <br />
+        <input type="checkbox" name="extinct" <%=animal.extinct ? "checked" : "" %> />
+        <!-- Checkbox for the extinct status, checked if the animal is extinct -->
+        <br />
+        <input type="text" name="lifeExpectancy" value="<%= animal.lifeExpectancy %>" />
+        <!-- Input field for the life expectancy with initial value from the animal object -->
+        <br />
+        <input type="submit" value="save edits" /> <!-- Submit button to save the edits -->
+    </form>
+</body>
+
+</html>

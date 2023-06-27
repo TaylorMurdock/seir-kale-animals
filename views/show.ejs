@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/animals">Back to the list of animals</a> <!-- Navigation link to go back to the list of animals -->
+    </nav>
+
+    <h1>
+        <%=animal.species%> <!-- Display the species of the animal using EJS template tag -->
+    </h1>
+    <p>Extinct: <%=animal.extinct%> <!-- Display the extinct status of the animal using EJS template tag -->
+    </p>
+    <p>location: <%=animal.location%> <!-- Display the location of the animal using EJS template tag -->
+    </p>
+    <p>Life Expectancy In Years: <%=animal.lifeExpectancy%>
+            <!-- Display the life expectancy of the animal using EJS template tag -->
+    </p>
+
+    <form method="POST" action="/animals/<%=animal._id%>?_method=DELETE">
+        <!-- Form to delete the animal by making a DELETE request to the corresponding route -->
+        <input type="submit" value="delete animal"> <!-- Delete button -->
+    </form>
+
+    <a href="/animals/<%=animal._id%>/edit">
+        <button>edit</button> <!-- Edit button -->
+    </a>
+</body>
+
+</html>
